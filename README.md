@@ -8,8 +8,14 @@ pip install Scrapy
 pip install beautifulsoup4
 
 # How to run
-cd githubCrawler 
+cd githubCrawler/
+
 modify settings.py file to change ROBOTSTXT_OBEY = True to ROBOTSTXT_OBEY = False
+
+cd spiders/
+
+modify example.py file (change this variable to URL you want to check: start_urls = ["https://github.com/****/shops.xml"])
+
 scrapy crawl example (please make sure you run this command in the fold where you have settings.py)
 
 
