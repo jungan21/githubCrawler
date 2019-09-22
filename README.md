@@ -2,8 +2,10 @@
 install Python first :)
 
 Then, run following commands to install depended packages:
- pip install Scrapy
- pip install beautifulsoup4
+
+pip install Scrapy
+
+pip install beautifulsoup4
 
 # How to run
 cd githubCrawler 
