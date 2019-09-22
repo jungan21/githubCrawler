@@ -15,9 +15,19 @@ class ExampleSpider(scrapy.Spider):
 
     def parse(self, response):
         soup = BeautifulSoup(response.text, features='lxml')
-        text = soup.get_text()
+        web_text = soup.get_text()
 
-        if (text.find ("Account") | text.find ("Password") | text.find ("account number") | text.find("scotiabank")):
-            print ("FOUND IT!!!!!!!!!!!")
+        sensitive_words = ["Account", "Password", "scotiabank", "wechat"]
+        output_found = "FOUND Sensitive word: {0}"
+        output_not_found= "Can't find Sensitive word: {0}"
+
+
+        for word in sensitive_words:
+            if ( web_text.find (word) == -1):
+                print(output_not_found.format(word))
+            else:
+                print(output_found.format(word))
+
+
 
 
