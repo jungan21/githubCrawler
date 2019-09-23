@@ -2,18 +2,23 @@
 import scrapy
 from ..items import GithubcrawlerItem
 
+sensitive_words_set = set([])
+
+    #["Account", "Password", "scotiabank", "colorPrimary"]
 
 class AppSpider(scrapy.Spider):
     name = 'example'
-    allowed_domains = ['github.com']
-    content_domains = 'https://github.com/'
+    allowed_domains = ['github.com', 'bitbucket.agile.bns']
+    content_domains = ['https://github.com/', 'https://bitbucket.agile.bns']
     start_urls = []
-
-
 
     def __init__(self, urls=None, *args, **kwargs):
         super(AppSpider, self).__init__(*args, **kwargs)
         self.start_urls = urls.split(',')
+
+        f = open('sensitive_word.txt', 'r')
+        for line in f:
+            sensitive_words_set.add(line)
 
     def parse(self, response):
         raw_url = response.css('a#raw-url').xpath('@href').extract_first()
@@ -33,14 +38,15 @@ class AppSpider(scrapy.Spider):
 
         file_name = url.rsplit('/', 1)[-1]
 
-        sensitive_words = ["Account", "Password", "scotiabank", "colorPrimary"]
+       # sensitive_words = ["Account", "Password", "scotiabank", "colorPrimary"]
         output_found = "FOUND SENSITIVE Information: {0} in file {1}"
         output_not_found = "Can't find Sensitive word: {0}"
         output_start_check = "<=== Start Checking Sensitive Information for file: {0} ===>"
         output_end_check = "<=== End Checking Sensitive Information for file: {0} ===>"
 
+
         print(output_start_check.format(file_name))
-        for word in sensitive_words:
+        for word in sensitive_words_set:
             if (response.text.find(word) != -1):
                 print(output_found.format(word, responseStr))
             else:
