@@ -21,7 +21,7 @@ This fold includes 3 files: `colors.xml`, `strings.xml`, `styles.xml`
 
 
 
-<==== Start Checking Sensitive Information for file: styles.xml ====>
+<==== Start Checking Sensitive Information for file: styles.xml ===>
 
 FOUND SENSITIVE Information: colorPrimary in file styles.xml
 
