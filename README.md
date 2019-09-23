@@ -43,28 +43,31 @@ Run the following command to start the crawler: (set urls=<link to the github re
 
 # Sample output:
 
-This tool will scan file by file.
+This tool will scan file by file. 
 
-    **<==== Start Checking Sensitive Information for file: _styles.xml_ ===>**
+    This tool will scan/check file by file. i.e. for each file scan for the keywords you put in the [sensitive_word.txt](githubCrawler/sensitive_word.txt)
+    
+
+    <==== Start Checking Sensitive Information for file: _styles.xml_ ===>
 
     FOUND SENSITIVE Information: colorPrimary in file styles.xml
 
-    <=== End Checking Sensitive Information for file: **styles.xml** ===>
+    <=== End Checking Sensitive Information for file: styles.xml ===>
 
     ....
     ....
 
-    <=== Start Checking Sensitive Information for file: **colors.xml** ===>
+    <=== Start Checking Sensitive Information for file: colors.xml ===>
 
     FOUND SENSITIVE Information: colorPrimary in file colors.xml
 
-    <=== End Checking Sensitive Information for file: **colors.xml** ===>
+    <=== End Checking Sensitive Information for file: colors.xml ===>
 
     ....
     ....
     
-    <=== Start Checking Sensitive Information for file: **strings.xml** ===>
+    <=== Start Checking Sensitive Information for file: strings.xml ===>
 
     Safe!
 
-    <=== End Checking Sensitive Information for file: **strings.xml** ===>
+    <=== End Checking Sensitive Information for file: strings.xml ===>
