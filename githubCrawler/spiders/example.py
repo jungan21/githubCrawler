@@ -31,18 +31,21 @@ class AppSpider(scrapy.Spider):
         # print('Jun response.text --> ', response.text)
         url = responseStr.strip()[5:len(responseStr) - 1]
 
+        file_name = url.rsplit('/', 1)[-1]
 
         sensitive_words = ["Account", "Password", "scotiabank", "colorPrimary"]
         output_found = "FOUND SENSITIVE Information: {0} in file {1}"
         output_not_found = "Can't find Sensitive word: {0}"
-        output_start_check = "<========================= Start Checking Sensitive Information for file: {0} =========================>"
-        output_end_check = "<========================= End Checking Sensitive Information for file: {0} =========================>"
+        output_start_check = "<=== Start Checking Sensitive Information for file: {0} ===>"
+        output_end_check = "<=== End Checking Sensitive Information for file: {0} ===>"
 
-        print(output_start_check.format(url))
+        print(output_start_check.format(file_name))
         for word in sensitive_words:
             if (response.text.find(word) != -1):
                 print(output_found.format(word, responseStr))
-        print(output_end_check.format(url))
+            else:
+                print("Safe!!!")
+        print(output_end_check.format(file_name))
 
         item = GithubcrawlerItem()
         item['file_urls'] = [url]
