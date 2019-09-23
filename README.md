@@ -5,6 +5,9 @@ A Python tool to crawl all files under a GitRepo fold to identify the senstive k
 
 Currently, some keywords are hardcoded in the the file: [sensitive_word.txt](githubCrawler/sensitive_word.txt), please feel free to update the list to add/remove the senstive words you are interested.
 
+e.g. we want to scan all files under fold: `https://github.com/ditclear/MVVM-Android/tree/bfbbc4536e057f16bde923f8676c2befa6a47321/app/src/main/res/values` to identify the sensitive keywords pre-defined in the [sensitive_word.txt](githubCrawler/sensitive_word.txt)
+
+
 # Setup
 
 1 install Python3 on your machine
