@@ -1,3 +1,6 @@
+# A Python tool to crawl all files under a  GitRepo fold to identify the senstive information/keywords. Currently, some keywords are hardcoded in the the code: https://github.com/jungan21/githubCrawler/blob/master/githubCrawler/spiders/example.py#L36, please feel free to update the list to include the senstive words you are interested. 
+
+
 # Prerequisite 
 1. install Python first :)
 2. run `pip install Scrapy` to intall Scrapy dependency
