@@ -22,13 +22,11 @@ Currently, some keywords are hardcoded in the the file: [sensitive_word.txt](git
     cd githubCrawler/githubCrawler
     
     pwd (I'm on Mac OS, please make sure you are in this fold)
-    -rw-r--r--  1 s4467575  BNS\Domain Users   294 21 Sep 21:06 pipelines.py
-    -rw-r--r--  1 s4467575  BNS\Domain Users  3611 21 Sep 21:06 middlewares.py
-    -rw-r--r--  1 s4467575  BNS\Domain Users  3150 21 Sep 21:07 settings.py
-    -rw-r--r--  1 s4467575  BNS\Domain Users   341 22 Sep 20:54 items.py
-    -rw-r--r--  1 s4467575  BNS\Domain Users    67 23 Sep 09:57 sensitive_word.txt
-
-5 Set the application default login
+    -rw-r--r--  1 <SID>  ***\Domain Users   294 21 Sep 21:06 pipelines.py
+    -rw-r--r--  1 <SID>  ***\Domain Users  3611 21 Sep 21:06 middlewares.py
+    -rw-r--r--  1 <SID>  ***\Domain Users  3150 21 Sep 21:07 settings.py
+    -rw-r--r--  1 <SID>  ***\Domain Users   341 22 Sep 20:54 items.py
+    -rw-r--r--  1 <SID>  ***\Domain Users    67 23 Sep 09:57 sensitive_word.txt
 
     https://github.com/ditclear/MVVM-Android/tree/bfbbc4536e057f16bde923f8676c2befa6a47321/app/src/main/res/values
 
@@ -38,7 +36,7 @@ Suppose we are going to check whether any files under the following github repo 
       
      https://github.com/ditclear/MVVM-Android/tree/bfbbc4536e057f16bde923f8676c2befa6a47321/app/src/main/res/values
 
-Run the following command to start the crawler
+Run the following command to start the crawler: (set urls=<link to the github repo fold>)
 
      scrapy crawl example -a urls=https://github.com/ditclear/MVVM-Android/tree/bfbbc4536e057f16bde923f8676c2befa6a47321/app/src/main/res/values
 
@@ -47,7 +45,7 @@ Run the following command to start the crawler
 
 This tool will scan file by file.
 
-    <==== Start Checking Sensitive Information for file: **styles.xml** ===>
+    **<==== Start Checking Sensitive Information for file: _styles.xml_ ===>**
 
     FOUND SENSITIVE Information: colorPrimary in file styles.xml
 
