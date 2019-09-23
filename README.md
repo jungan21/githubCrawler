@@ -7,6 +7,8 @@
 # How to run
 1. check out the code: `git clone https://github.com/jungan21/githubCrawler.git`
 2. `cd githubCrawler/githubCrawler`
-3. run command: (pass the URL to git repo file fold to `urls`) `scrapy crawl example -a urls=https://github.com/ditclear/MVVM-Android/tree/bfbbc4536e057f16bde923f8676c2befa6a47321/app/src/main/res/values`
+3. run command: (pass the URL to git repo file fold to `urls`) 
+
+`scrapy crawl example -a urls=https://github.com/ditclear/MVVM-Android/tree/bfbbc4536e057f16bde923f8676c2befa6a47321/app/src/main/res/values`
 
 
