@@ -3,7 +3,7 @@
 
 A Python tool to crawl all files under a GitRepo fold to identify the senstive keywords.
 
-Currently, some keywords are hardcoded in the the file: https://github.com/jungan21/githubCrawler/blob/master/githubCrawler/sensitive_word.txt, please feel free to update the list to add/remove the senstive words you are interested.
+Currently, some keywords are hardcoded in the the file: [sensitive_word.txt](githubCrawler/sensitive_word.txt), please feel free to update the list to add/remove the senstive words you are interested.
 
 # Setup
 
@@ -45,24 +45,28 @@ Run the following command to start the crawler
 
 # Sample output:
 
-<==== Start Checking Sensitive Information for file: styles.xml ===>
+This tool will scan file by file.
 
-FOUND SENSITIVE Information: colorPrimary in file styles.xml
+    <==== Start Checking Sensitive Information for file: **styles.xml** ===>
 
-<=== End Checking Sensitive Information for file: styles.xml ===>
+    FOUND SENSITIVE Information: colorPrimary in file styles.xml
 
-....
-....
+    <=== End Checking Sensitive Information for file: **styles.xml** ===>
 
-<=== Start Checking Sensitive Information for file: colors.xml ===>
+    ....
+    ....
 
-FOUND SENSITIVE Information: colorPrimary in file colors.xml
+    <=== Start Checking Sensitive Information for file: **colors.xml** ===>
 
-<=== End Checking Sensitive Information for file: colors.xml ===>
+    FOUND SENSITIVE Information: colorPrimary in file colors.xml
 
+    <=== End Checking Sensitive Information for file: **colors.xml** ===>
 
-<=== Start Checking Sensitive Information for file: strings.xml ===>
+    ....
+    ....
+    
+    <=== Start Checking Sensitive Information for file: **strings.xml** ===>
 
-Safe!
+    Safe!
 
-<=== End Checking Sensitive Information for file: strings.xml ===>
+    <=== End Checking Sensitive Information for file: **strings.xml** ===>
